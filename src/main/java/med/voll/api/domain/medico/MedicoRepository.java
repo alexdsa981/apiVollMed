@@ -11,6 +11,7 @@ public interface MedicoRepository extends JpaRepository<Medico, Long> {
 
     Page<Medico> findByActivoTrue(Pageable paginacion);
 
+    //selecciona medico random con especialidad especificada y fecha libre
     @Query("""
             SELECT * FROM Medico m
             WHERE m.activo = 1 and
